@@ -21,17 +21,39 @@ print(my_dataframe)
 # DataFrame is the whole table of data
 # Can introduce Series (will explore in future)
 
-# Recall elements in a dataframe
+# Recall elements in a dataframe----
 print(my_dataframe.loc[0]) # returns first row in data frame
 print(my_dataframe.loc[[0, 2]]) # returns first and third row in data frame
 
-# Slice elements in a dataframe
+# Slice elements in a dataframe----
 print(my_dataframe.loc[0:2])
 
-# Creating a new dataset:
-dataset = {
+# Creating a new dataset----
+dataset2 = {
     'Cars': [20, 15, 12],
     'Bicycles': [25, 23, 15]
 }
-dataframe2 = pd.DataFrame(dataset)
+dataframe2 = pd.DataFrame(dataset2, index = ['Monday', 'Tuesday', 'Wednesday'])
 print(dataframe2)
+
+# Locating elements in dataframe using renamed index
+print(dataframe2.loc['Tuesday'])
+
+# Looking at Series----
+a = [20, 15, 12]
+series = pd.Series(a)
+print(series)
+
+# Can also locate elements in a series
+print(series[0])
+
+# similar to dataframes, can also relabel elements
+b = [21, 10, 12]
+series2 = pd.Series(b, index = ['Monday', 'Tuesday', 'Wednesday'])
+print(series2)
+
+# can locate elements using new labelled index:
+print(series2['Monday'])
+
+# Importing excel/CSV data into python----
+
