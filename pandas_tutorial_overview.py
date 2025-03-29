@@ -56,4 +56,24 @@ print(series2)
 print(series2['Monday'])
 
 # Importing excel/CSV data into python----
+# Pandas reading a CSV
+df = pd.read_csv('my_data.csv')
+print(df)
+# locating rows
+print(df.loc[0])
+print(df.loc[[0, 3]])
 
+# Can use head() and tail() operation in pandas
+# returns first 5 rows
+print(df.head())
+# returns first 7 rows
+print(df.head())
+# returns last 5 rows
+print(df.tail())
+# returns last 7 rows
+print(df.tail(7))
+
+# retrieving dataset info/summary
+print(df.info())
+
+# Handling NA values in pandas----
