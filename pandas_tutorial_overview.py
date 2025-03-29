@@ -77,3 +77,54 @@ print(df.tail(7))
 print(df.info())
 
 # Handling NA values in pandas----
+df2 = pd.read_csv('my_data2.csv')
+print(df2)
+
+# utilizing .info() section of pandas
+print(df2.info())
+
+# can drop rows with empty entries
+# complete_df = df2.dropna()
+# print(complete_df)
+
+# replacing NA values with given value
+# df2.fillna(10, inplace=True)
+# print(df2)
+
+# replacing NA values with given value in a specific column
+# df2['Cars'] = df2['Cars'].fillna(130)
+# print(df2)
+
+# Finding Mean, Mode, Medians of columns----
+# mean and replacing entries
+# mean = df2['Cars'].mean()
+# print(mean)
+#
+# df2['Cars'] = df2['Cars'].fillna(mean)
+# print(df2)
+
+# mode
+# mode = df2['Cars'].mode()[0]
+# print(mode)
+#
+# df2['Cars'] = df2['Cars'].fillna(mode)
+# print(df2)
+
+# median
+# median = df2['Cars'].median()
+# print(median)
+#
+# df2['Cars'] = df2['Cars'].fillna(median)
+# print(df2)
+
+# simply replace an index
+# df2.loc[6, 'Cars'] = 4000
+# print(df2)
+
+# Plotting dataframes using MatPlotLib----
+# importing matplotlib
+import matplotlib.pyplot as plt
+
+df.plot()
+plt.show()
+
